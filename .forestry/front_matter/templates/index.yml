@@ -1,0 +1,20 @@
+---
+label: Home
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+  - type: boolean
+    name: isHome
+    label: Is home page
+    hidden: true
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: index
+    config:
+      required: true
+pages:
+  - src/pages/index.md

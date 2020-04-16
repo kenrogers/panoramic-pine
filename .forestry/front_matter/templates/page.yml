@@ -1,12 +1,11 @@
 ---
 label: Page
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: template
-    label: Template
-    hidden: true
-    default: page
-    config:
-      required: true
-pages: []
+- type: text
+  name: template
+  label: Template
+  hidden: true
+  default: page
+  config:
+    required: true

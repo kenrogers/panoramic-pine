@@ -1,17 +1,16 @@
 ---
 label: Store
 hide_body: true
-is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Title
-  - type: text
-    name: template
-    label: Template
-    hidden: true
-    default: store
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: template
+  label: Template
+  hidden: true
+  default: store
+  config:
+    required: true
 pages:
-  - src/pages/store.md
+- src/pages/store.md

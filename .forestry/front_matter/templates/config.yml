@@ -1,68 +1,67 @@
 ---
 label: Global site config
 hide_body: true
-is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Title
-    description: Site title
-    config:
-      required: true
-  - type: text
-    name: title
-    label: Title
-  - type: text
-    name: snipcart_js
-    label: Snipcart JavaScript file URL
-  - type: text
-    name: snipcart_css
-    label: Snipcart CSS file URL
-  - type: text
-    name: snipcart_api_key
-    label: Snipcart public API key
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: snipcart_js
+  label: Snipcart JavaScript file URL
+- type: text
+  name: snipcart_css
+  label: Snipcart CSS file URL
+- type: text
+  name: snipcart_api_key
+  label: Snipcart public API key
+- type: field_group
+  name: logos
+  label: Logos
+  fields:
   - type: field_group
-    name: logos
-    label: Logos
+    name: light
+    label: Light
     fields:
-      - type: field_group
-        name: light
-        label: Light
-        fields:
-          - type: file
-            name: optimized
-            label: Optimized (WEBP or similar)
-          - type: file
-            name: fallback
-            label: Fallback (JPG or PNG)
-      - type: field_group
-        name: dark
-        label: Dark
-        fields:
-          - type: file
-            name: optimized
-            label: Optimized (WEBP or similar)
-          - type: file
-            name: fallback
-            label: Fallback (JPG or PNG)
-  - type: select
-    name: palette
-    label: Color Palette
-    config:
-      source:
-        type: custom
-      options:
-        - default
+    - type: file
+      name: optimized
+      label: Optimized (WEBP or similar)
+    - type: file
+      name: fallback
+      label: Fallback (JPG or PNG)
   - type: field_group
-    name: palettes
-    label: Palettes
-    hidden: true
+    name: dark
+    label: Dark
     fields:
-      - type: field_group
-        name: default
-        label: Default
-        fields:
-          - type: include
-            name: include_palette
-            label: Palette
-            template: palette
+    - type: file
+      name: optimized
+      label: Optimized (WEBP or similar)
+    - type: file
+      name: fallback
+      label: Fallback (JPG or PNG)
+- type: select
+  name: palette
+  label: Color Palette
+  config:
+    source:
+      type: custom
+    options:
+    - default
+- type: field_group
+  name: palettes
+  label: Palettes
+  hidden: true
+  fields:
+  - type: field_group
+    name: default
+    label: Default
+    fields:
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
